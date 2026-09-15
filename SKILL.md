@@ -24,6 +24,31 @@ These apply regardless of topic. Violating any of them is a defect, not a stylis
 7. **Never present interpretation as fact.** Keep inference (what you conclude) visibly separate from observation (what a source actually said). If a widely-repeated number can't be traced to a real methodology, flag it, don't repeat it.
 8. **Layer 1 / Layer 2 separation.** Internal registries and this skill's technical vocabulary (evidence_family_id, MC/AMEND numbers, Tier labels, Token names, QA type names) are for your own bookkeeping and any final audit-style report. What you *say to the user* during normal execution should be plain language — see "User-facing interaction model" below.
 
+## Language & Terminology Standard (Traditional Chinese deliverables)
+
+Applies whenever the Research Brief's `language` is Traditional Chinese — to every deliverable (Report, Proposal, Deck): headings, body copy, evidence summaries, insight and strategy text, table content, everything.
+
+- **Write in Taiwan Traditional Chinese (zh-TW), not just Traditional script.** Vocabulary, phrasing, and idiom must match how people in Taiwan actually write and speak — not Simplified-Chinese (PRC) vocabulary rendered in Traditional characters.
+- **PRC terminology is prohibited outright**, even in traditional characters. Common substitutions to enforce (non-exhaustive — apply the same judgment call to any term not listed):
+
+  | PRC usage (banned) | Taiwan usage (use instead) |
+  |---|---|
+  | 質量 | 品質 |
+  | 優化 | 優化／改善／調整／提升（依語境選用） |
+  | 打印 | 列印 |
+  | 激活 | 啟動／啟用 |
+  | 信息 | 訊息／資訊 |
+  | 視頻／音頻 | 影片／音訊 |
+  | 屏幕 | 螢幕 |
+  | 軟件／硬件 | 軟體／硬體 |
+  | 鼠標 | 滑鼠 |
+  | 內存 | 記憶體 |
+  | 渠道 | 管道／通路 |
+  | 土豆 | 馬鈴薯 |
+
+- **Mandatory self-check before presenting any Traditional Chinese deliverable**: re-read the draft once, specifically hunting for PRC terminology. Finding even one instance means the draft fails this check — revise and re-check before it goes to the user. Treat this as a required delivery step, not optional polish; don't rely on getting it right on the first pass.
+- This standard governs word choice and idiom only. It never relaxes or substitutes for the evidence, tiering, or closure rules above — a finding written in correct Taiwan usage is still subject to every non-negotiable principle.
+
 ## Step 0 — Campaign intake (produces the Research Brief)
 
 Before any research, collect (or default, then confirm) these fields — do not skip straight to searching:
@@ -37,7 +62,7 @@ Before any research, collect (or default, then confirm) these fields — do not 
 - `inclusion_criteria` / `exclusion_criteria`
 - `expected_trend_count` (a range; **0 must always be an explicitly acceptable value**)
 - `final_audience` and `required_deliverables` (Report / Proposal / Deck — any combination; Proposal and Deck are conditional on an actual trend existing to build them from)
-- `language`
+- `language` (if Traditional Chinese, the "Language & Terminology Standard" section above governs every deliverable — confirm this at Gate 1 so it's not a surprise at delivery)
 
 This becomes the Research Brief. See `reference/registries.md` for the full field reference if a campaign config is ambiguous.
 
@@ -50,7 +75,7 @@ Full module-by-module detail (exact inputs/outputs/QA per step) lives in `refere
 3. **Trend** — cluster findings that share a common underlying change; require ≥2 independent CORE evidence families to qualify a cluster; score qualifying clusters on the five-dimension rubric; merge genuine overlaps; run a final "did we miss anything" gap check before closing the research phase.
 4. **Insight** — only for qualified trends: generate the marketing insight, run its own quality/acceptance check.
 5. **Strategy** — translate accepted insights into a proposal narrative, checked against the Media Product Boundary and campaign relevance.
-6. **Delivery** — render the Final Trend Report and, if applicable, the Proposal and/or Executive Deck; run automated QA (rendering, cross-artifact consistency, content quality) before presenting for final approval.
+6. **Delivery** — render the Final Trend Report and, if applicable, the Proposal and/or Executive Deck; run automated QA (rendering, cross-artifact consistency, content quality) before presenting for final approval. When `language` is Traditional Chinese, this QA pass includes the Language & Terminology Standard self-check above — do not present a deliverable that hasn't passed it.
 
 Governance runs continuously underneath all of this: registries stay internally consistent, merges propagate evidence correctly, nothing gets silently orphaned. See `reference/registries.md`.
 
